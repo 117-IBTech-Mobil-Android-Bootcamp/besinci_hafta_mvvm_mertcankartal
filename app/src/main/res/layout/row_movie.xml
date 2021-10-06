@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.example.homework5.ui.movieList.model.Movie" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/moviePoster"
+                imageUrl="@{movie.poster_path}"
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:src="@{movie.poster_path}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/movieTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/titleText_margin_top"
+                android:gravity="center"
+                android:text="@{movie.title}"
+                android:textAlignment="center"
+                android:textSize="@dimen/title_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moviePoster" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/moviePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/voteAverageText_margin_top"
+                android:gravity="center"
+                android:text="@{String.valueOf(movie.vote_average)}"
+                android:textAlignment="center"
+                android:textSize="@dimen/voteA_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/movieTitle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="@dimen/iconStar_margin_start"
+                android:layout_marginTop="@dimen/iconStar_margin_top"
+                android:src="@drawable/ic_star_icon"
+                app:layout_constraintStart_toEndOf="@+id/moviePoint"
+                app:layout_constraintTop_toBottomOf="@id/movieTitle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/view_margin_top"
+                android:background="@color/viewColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/moviePoint" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

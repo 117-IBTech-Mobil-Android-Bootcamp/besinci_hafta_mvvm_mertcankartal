@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--MARGIN-->
+    <dimen name="login_logo_margin_top">105dp</dimen>
+    <dimen name="star_margin_top">18dp</dimen>
+    <dimen name="star_margin_start">40dp</dimen>
+    <dimen name="vote_margin_start">40dp</dimen>
+    <dimen name="vote_margin_top">5dp</dimen>
+    <dimen name="votecount_margin_start">40dp</dimen>
+    <dimen name="votecount_margin_top">6dp</dimen>
+    <dimen name="voteAverage_margin_top">10dp</dimen>
+    <dimen name="voteAverage_margin_start">2dp</dimen>
+    <dimen name="rateStar_margin_top">18dp</dimen>
+    <dimen name="ratetext_margin_top">8dp</dimen>
+    <dimen name="popularity_margin_top">10dp</dimen>
+    <dimen name="popularity_margin_end">36dp</dimen>
+    <dimen name="metascore_margin_end">20dp</dimen>
+    <dimen name="metascore_margin_top">5dp</dimen>
+    <dimen name="title_margin_top">24dp</dimen>
+    <dimen name="title_margin_start">32dp</dimen>
+    <dimen name="favourite_margin_end">24dp</dimen>
+    <dimen name="favourite_margin_top">24dp</dimen>
+    <dimen name="release_margin_top">10dp</dimen>
+    <dimen name="release_margin_start">18dp</dimen>
+    <dimen name="runtime_margin_start">12dp</dimen>
+    <dimen name="runtime_margin_top">10dp</dimen>
+    <dimen name="horizontal_margin_top">20dp</dimen>
+    <dimen name="horizontal_margin_start">16dp</dimen>
+    <dimen name="summary_margin_start">16dp</dimen>
+    <dimen name="summary_margin_top">16dp</dimen>
+    <dimen name="movieId_margin_start">15dp</dimen>
+    <dimen name="titleText_margin_top">20dp</dimen>
+    <dimen name="voteAverageText_margin_top">20dp</dimen>
+    <dimen name="iconStar_margin_top">24dp</dimen>
+    <dimen name="iconStar_margin_start">12dp</dimen>
+    <dimen name="view_margin_top">10dp</dimen>
+    <dimen name="genre_margin_start">7dp</dimen>
+    <dimen name="genre_padding">5dp</dimen>
+
+
+    <!--TEXT SIZE-->
+    <dimen name="login_text_large">28sp</dimen>
+    <dimen name="vote_text">21sp</dimen>
+    <dimen name="voteCount_text">14sp</dimen>
+    <dimen name="voteAverage_text">16sp</dimen>
+    <dimen name="rate_text">16sp</dimen>
+    <dimen name="metascore_text">16sp</dimen>
+    <dimen name="title_text">32sp</dimen>
+    <dimen name="release_text">16sp</dimen>
+    <dimen name="runtime_text">16sp</dimen>
+    <dimen name="summary_text">24sp</dimen>
+    <dimen name="voteA_text">24sp</dimen>
+    <dimen name="overview_text">14sp</dimen>
+    <dimen name="genre_text">16sp</dimen>
+    <dimen name="fav_text">16sp</dimen>
+
+</resources>

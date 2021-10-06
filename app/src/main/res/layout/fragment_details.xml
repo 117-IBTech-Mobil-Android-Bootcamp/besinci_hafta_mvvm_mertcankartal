@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="movieDetails"
+            type="com.example.homework5.ui.details.DetailsListViewStateModel" />
+    </data>
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/constraint1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/moviePoster"
+               imageUrl="@{movieDetails.poster}"
+               android:layout_width="match_parent"
+               android:layout_height="300dp"
+               android:src="@{movieDetails.poster}"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardView"
+               android:layout_width="match_parent"
+               android:layout_height="125dp"
+               android:src="@drawable/rounded_left_card"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/moviePoster">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/PointIcon"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:layout_marginStart="@dimen/star_margin_start"
+                       android:layout_marginTop="@dimen/star_margin_top"
+                       android:src="@drawable/ic_star"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:id="@+id/voteAverage"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintStart_toStartOf="parent"
+                       android:layout_marginStart="@dimen/vote_margin_start"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/vote_text"
+                       app:layout_constraintTop_toBottomOf="@id/PointIcon"
+                       android:layout_marginTop="@dimen/vote_margin_top"
+                       android:text="@{String.valueOf(movieDetails.voteAverage)}"/>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/voteCount"
+                       android:text="@{String.valueOf(movieDetails.voteCount)}"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/voteAverage"
+                       android:layout_marginStart="@dimen/votecount_margin_start"
+                       android:layout_marginTop="@dimen/votecount_margin_top"
+                       android:textColor="@color/voteCountColor"
+                       android:textSize="@dimen/voteCount_text"/>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintStart_toEndOf="@+id/voteAverage"
+                       app:layout_constraintTop_toBottomOf="@id/PointIcon"
+                       android:layout_marginTop="@dimen/voteAverage_margin_top"
+                       android:layout_marginStart="@dimen/voteAverage_margin_start"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/voteAverage_text"
+                       android:text="/10"/>
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/rate"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_blank_star"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       android:layout_marginTop="@dimen/rateStar_margin_top"/>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/Oylayın"
+                       android:textAllCaps="false"
+                       android:textColor="@color/black"
+                       app:layout_constraintTop_toBottomOf="@+id/rate"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:layout_marginTop="@dimen/ratetext_margin_top"
+                       android:textSize="@dimen/rate_text"/>
+
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:id="@+id/popularity"
+                       android:layout_width="40dp"
+                       android:layout_height="40dp"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:layout_marginTop="@dimen/popularity_margin_top"
+                       android:layout_marginEnd="@dimen/popularity_margin_end"
+                       android:backgroundTint="@color/popularityColor"
+                       android:textColor="@color/white"
+                       android:text="77"/>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/Metascore"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/metascore_text"
+                       app:layout_constraintTop_toBottomOf="@id/popularity"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:layout_marginEnd="@dimen/metascore_margin_end"
+                       android:layout_marginTop="@dimen/metascore_margin_top"/>
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.cardview.widget.CardView>
+
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/titleMovie"
+               android:layout_width="250dp"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/title_text"
+               android:textColor="@color/black"
+               android:text="@{String.valueOf(movieDetails.title)}"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/cardView"
+               android:layout_marginTop="@dimen/title_margin_top"
+               android:layout_marginStart="@dimen/title_margin_start"/>
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/addFavouriteButton"
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:background="@drawable/ic_heart_black_blank"
+               app:layout_constraintTop_toBottomOf="@id/cardView"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:layout_marginEnd="@dimen/favourite_margin_end"
+               android:layout_marginTop="@dimen/favourite_margin_top"
+               />
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/releaseDate"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@{String.valueOf(movieDetails.releaseDate)}"
+               android:textSize="16sp"
+               android:textColor="#9A9BB2"
+               app:layout_constraintTop_toBottomOf="@+id/titleMovie"
+               app:layout_constraintStart_toStartOf="parent"
+               android:layout_marginTop="10dp"
+               android:layout_marginStart="32dp"/>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/adult"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@{String.valueOf(movieDetails.adult)}"
+               android:textSize="@dimen/release_text"
+               android:textColor="@color/releaseColor"
+               app:layout_constraintTop_toBottomOf="@+id/titleMovie"
+               app:layout_constraintStart_toEndOf="@+id/releaseDate"
+               android:layout_marginTop="@dimen/release_margin_top"
+               android:layout_marginStart="@dimen/release_margin_start"/>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/runtime"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@{String.valueOf(movieDetails.runtime)}"
+               app:layout_constraintStart_toEndOf="@+id/adult"
+               app:layout_constraintTop_toBottomOf="@+id/titleMovie"
+               android:layout_marginStart="@dimen/runtime_margin_start"
+               android:layout_marginTop="@dimen/runtime_margin_top"
+               android:textSize="@dimen/runtime_text"
+               android:textColor="@color/runtimeColor"/>
+
+           <HorizontalScrollView
+               android:id="@+id/horizontalScroll"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+               android:layout_marginTop="@dimen/horizontal_margin_top"
+               android:layout_marginStart="@dimen/horizontal_margin_start">
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:id="@+id/container"/>
+           </HorizontalScrollView>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/filmTitle"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/summary_margin_start"
+               android:layout_marginTop="@dimen/summary_margin_top"
+               android:text="@string/Plot_Summary"
+               android:textSize="@dimen/summary_text"
+               android:textColor="@color/summaryColor"
+               app:layout_constraintTop_toBottomOf="@id/horizontalScroll"
+               app:layout_constraintStart_toStartOf="parent" />
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/overview"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="10dp"
+               android:text="@{String.valueOf(movieDetails.overview)}"
+               android:textSize="@dimen/overview_text"
+               android:textColor="@color/overviewColor"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/filmTitle"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </androidx.core.widget.NestedScrollView>
+</layout>
